@@ -1,0 +1,1 @@
+web: gunicorn tap_bhomiyo.wsgi
