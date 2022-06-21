@@ -17,3 +17,6 @@ class order_details(models.Model):
     linkedIn=models.CharField(max_length=30, null=True)
     referenceCode=models.CharField(max_length=5, null=True)
     birthDate=models.DateField()
+
+    def __str__(self):
+        return self.name

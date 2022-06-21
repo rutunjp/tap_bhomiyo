@@ -11,13 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import os 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
+ 
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-^=3=e6plh(4#ib$7^po0=c2le13r2_prp0e@yil(#atr1sk)vr'
@@ -27,7 +23,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+  
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,12 +32,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles','rest_framework',
     'tapBhomiyoAPI', 'phonenumber_field',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
