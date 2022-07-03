@@ -19,4 +19,4 @@ class order_details(models.Model):
     birthDate=models.DateField()
 
     def __str__(self):
-        return self.name
+        return self.fullName
